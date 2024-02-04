@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Government Design Systems`,
+    description: `Designs Systems that build the world.`,
+    author: `@danbrady`,
+    siteUrl: `https://gov-design-systems.netlify.app/`,
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -40,5 +40,13 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `design-systems`,
+        path: `${__dirname}/_posts/design-systems`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
-}
+};

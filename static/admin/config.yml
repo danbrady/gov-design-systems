@@ -25,6 +25,30 @@ collections:
         }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Language", name: "language", widget: "string" }
+
+  - name: "art"
+    label: "Art"
+    folder: "public/docs/portfolio"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - label: "Tags3"
+        name: "tag3"
+        widget: "relation"
+        collection: "tags"
+        search_fields: ["name"]
+        value_field: "name"
+        display_fields: ["name"]
+        multiple: true
+
+  - name: "tags"
+    label: "Tag"
+    folder: "public/docs/tags"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "_posts/blog" # The path to the folder where the documents are stored
