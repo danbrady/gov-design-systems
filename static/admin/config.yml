@@ -25,29 +25,16 @@ collections:
         }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Language", name: "language", widget: "string" }
-
-  - name: "art"
-    label: "Art"
-    folder: "public/docs/portfolio"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
-    fields:
-      - label: "Tags3"
-        name: "tag3"
-        widget: "relation"
-        collection: "tags"
-        search_fields: ["name"]
-        value_field: "name"
-        display_fields: ["name"]
-        multiple: true
-
-  - name: "tags"
-    label: "Tag"
-    folder: "public/docs/tags"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Language Code", name: "languageCode", widget: "string" }
+      - { label: "Country", name: "country", widget: "string" }
+      - { label: "Country Code", name: "countryCode", widget: "string" }
+      - {
+          label: "Agency/Department",
+          name: "agency",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
 
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
