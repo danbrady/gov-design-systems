@@ -11,24 +11,30 @@ const Card = ({ title, url, country, countryCode, language, agency }) => {
         />
       </a> */}
 
-      <div className="p-5">
-        <h4 className="mb-2 text-xl font-bold text-gray-900">{title}</h4>
-        <a href={url}>
-          {agency && (
-            <div className="text-gray-400 uppercase text-sm tracking-tight">
-              {agency}
-            </div>
-          )}
-          <span className="text-gray-400 uppercase font-bold text-sm">
-            {country}
-          </span>{" "}
-        </a>
+      <div className="p-5 flex flex-col h-full">
+        <div className="grow">
+          <div className="mb-2">
+            <span className={`fi fi-${countryCode} mr-2 mb-2 border`}></span>
+            <span className="uppercase text-sm text-gray-500 tracking-tight">
+              {country}
+            </span>
+          </div>
 
-        <div className="flex justify-between">
-          <span className="text-gray-400 uppercase text-xs font-bold">
-            {language}
-          </span>
-          <span className={`fi fi-${countryCode.toLowerCase()}`}></span>{" "}
+          <div className="flex">
+            <div className="grow">
+              <h4 className="text-lg font-bold text-gray-800 leading-tight mb-2">
+                {title}
+              </h4>
+
+              {agency && (
+                <div className="text-gray-400 uppercase text-sm tracking-tight leading-tight mb-2">
+                  {agency}
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="text-gray-400 uppercase text-xs">{language}</div>
         </div>
 
         <div className="">

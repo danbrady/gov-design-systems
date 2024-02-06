@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     <div className="flex flex-col h-full">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 max-w-6xl mx-auto">{children}</main>
 
       <footer>
         © {new Date().getFullYear()} &middot; Built with
