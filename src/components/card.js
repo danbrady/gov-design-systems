@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Card = ({ title, url, country, countryCode, language, agency }) => {
   return (
-    <div className="bg-white border border-gray-100 rounded-lg shadow-lg">
+    <div className="bg-white border border-slate-100 rounded-sm shadow-sm">
       {/* <a href={url}>
         <img
           className="rounded-t-lg"
@@ -11,37 +11,42 @@ const Card = ({ title, url, country, countryCode, language, agency }) => {
         />
       </a> */}
 
-      <div className="p-5 flex flex-col h-full">
+      <div className="flex flex-col h-full">
         <div className="grow">
-          <div className="mb-2">
-            <span className={`fi fi-${countryCode} mr-2 mb-2 border`}></span>
-            <span className="uppercase text-sm text-gray-500 tracking-tight">
-              {country}
-            </span>
-          </div>
+          <div className="p-6">
+            <div className="flex">
+              <div className="">
+                <span
+                  className={`fi fi-${countryCode} mr-2 mb-2 border`}
+                ></span>
+              </div>
+              <div className="">
+                <span className="uppercase text-sm text-slate-400 tracking-tight">
+                  {country}
+                </span>{" "}
+                &middot;{" "}
+                <span className="text-slate-400 text-sm">{language}</span>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="grow">
+                <h2 className="text-2xl font-bold text-slate-500 leading-tight mb-2 text-balance">
+                  {title}
+                </h2>
 
-          <div className="flex">
-            <div className="grow">
-              <h4 className="text-lg font-bold text-gray-800 leading-tight mb-2">
-                {title}
-              </h4>
-
-              {agency && (
-                <div className="text-gray-400 uppercase text-sm tracking-tight leading-tight mb-2">
-                  {agency}
-                </div>
-              )}
+                {agency && (
+                  <h3 className="text-md text-slate-400 mb-2">{agency}</h3>
+                )}
+              </div>
             </div>
           </div>
-
-          <div className="text-gray-400 uppercase text-xs">{language}</div>
         </div>
 
-        <div className="">
+        <div className="p-6">
           <a
             href={url}
             className="inline-flex items-center
-          py-2 text-sm font-medium text-center focus:ring-4 focus:outline-none focus:ring-blue-300"
+          mt-2 text-sm font-medium text-center focus:ring-4 focus:outline-none focus:ring-blue-300"
           >
             Visit Site
             <svg

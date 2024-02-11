@@ -29,8 +29,8 @@ collections:
       - { label: "Country", name: "country", widget: "string" }
       - { label: "Country Code", name: "countryCode", widget: "string" }
       - {
-          label: "Agency/Department",
-          name: "agency",
+          label: "Maintainer",
+          name: "maintainer",
           widget: "string",
           required: false,
         }
