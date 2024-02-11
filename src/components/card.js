@@ -2,16 +2,8 @@ import * as React from "react";
 
 const Card = ({ title, url, country, countryCode, language, agency }) => {
   return (
-    <div className="bg-white border border-gray-100 rounded-lg shadow-lg">
-      {/* <a href={url}>
-        <img
-          className="rounded-t-lg"
-          src="https://dummyimage.com/640x320/eee/aaa"
-          alt=""
-        />
-      </a> */}
-
-      <div className="p-5 flex flex-col h-full">
+    <div className="bg-white border border-gray-100 rounded-lg shadow-lg flex flex-col">
+      <div className="pt-5 px-5 grow">
         <div className="grow">
           <div className="mb-2">
             <span className={`fi fi-${countryCode} mr-2 mb-2 border`}></span>
@@ -61,6 +53,15 @@ const Card = ({ title, url, country, countryCode, language, agency }) => {
             </svg>
           </a>
         </div>
+      </div>
+      <div className="px-5 py-2 border-t border-slate-300  bg-slate-100 flex justify-between">
+        <div className="">
+          <span className={`fi fi-${countryCode} mr-2 border`}></span>
+          <span className="uppercase text-sm text-slate-400 tracking-tight">
+            {country}
+          </span>
+        </div>
+        <div className="text-slate-400">{language}</div>
       </div>
     </div>
   );
