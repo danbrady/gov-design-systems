@@ -1,0 +1,22 @@
+[
+  {
+    "title": "United States Web Design System (USWDS)",
+    "url": "https://designsystem.digital.gov",
+    "language": "English",
+    "country": "USA",
+    "countryCode": "us",
+    "date": "2024-02-05T01:45:22.530Z",
+    "slug": "foo"
+  },
+  {
+    "title": "Design system del Paese",
+    "url": "https: //designers.italia.it/design-system/",
+    "language": "italiano",
+    "languageCode": "it",
+    "country": "Italy",
+    "countryCode": "it",
+    "agency": "Dipartimento per la trasformazione digitale",
+    "date": "2024-02-05T14: 24: 01.494Z",
+    "slug": "foo2"
+  }
+]

@@ -27,9 +27,9 @@ const Layout = ({ children }) => {
     <div className="flex flex-col h-full">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
 
-      <main className="flex-1 max-w-6xl mx-auto">{children}</main>
+      <main className="flex-1 max-w-7xl mx-auto">{children}</main>
 
-      <footer>
+      <footer className="bg-sky-600">
         © {new Date().getFullYear()} &middot; Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>

@@ -3,9 +3,8 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "",
   "dependencies": {
-    "flag-icons": "^7.1.0",
     "gatsby": "^5.13.2",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
@@ -14,7 +13,8 @@
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-flagkit": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
@@ -22,6 +22,7 @@
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.33.2",
     "gatsby-plugin-postcss": "^6.13.1",
+    "json-to-frontmatter-markdown": "^1.0.0",
     "postcss": "^8.4.33",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.4.1"
@@ -37,7 +38,8 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "convert": "node ./convert"
   },
   "repository": {
     "type": "git",
