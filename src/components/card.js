@@ -1,8 +1,17 @@
 import * as React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const Card = ({ title, url, country, countryCode, language, agency }) => {
+const Card = ({
+  title,
+  url,
+  country,
+  countryCode,
+  language,
+  agency,
+  thumbnail,
+}) => {
   return (
-    <div className="bg-white border border-slate-100 rounded-sm shadow-sm">
+    <div className="bg-white border border-slate-100 rounded-lg shadow-sm relative">
       {/* <a href={url}>
         <img
           className="rounded-t-lg"
@@ -11,58 +20,57 @@ const Card = ({ title, url, country, countryCode, language, agency }) => {
         />
       </a> */}
 
-      <div className="flex flex-col h-full">
-        <div className="grow">
-          <div className="p-6">
-            <div className="flex">
-              <div className="">
-                <span
-                  className={`fi fi-${countryCode} mr-2 mb-2 border`}
-                ></span>
-              </div>
-              <div className="">
-                <span className="uppercase text-sm text-slate-400 tracking-tight">
-                  {country}
-                </span>{" "}
-                &middot;{" "}
-                <span className="text-slate-400 text-sm">{language}</span>
-              </div>
-            </div>
-            <div className="flex">
-              <div className="grow">
-                <h2 className="text-2xl font-bold text-slate-500 leading-tight mb-2 text-balance">
-                  {title}
-                </h2>
+      <div className="absolute top-0 left-1/2  -translate-x-1/2 -translate-y-1/2 bg-white border flex items-center gap-2 px-4 z-50 rounded-full">
+        <span className={`fi fi-${countryCode}`}></span>
+        <span className="text-xs font-bold uppercase text-slate-500 whitespace-nowrap tracking-wider leading-loose">
+          {country}
+        </span>
+      </div>
 
-                {agency && (
-                  <h3 className="text-md text-slate-400 mb-2">{agency}</h3>
-                )}
-              </div>
+      <div className="flex flex-col h-full text-center">
+        <div className="relative rounded-t-lg overflow-hidden">
+          <img src={thumbnail} alt="" />
+
+          {thumbnail && (
+            <>
+              {/* <GatsbyImage image={featuredImg} alt={`Screenshot of ${title}`} /> */}
+              <div className="absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-b from-transparent from-50% to-neutral-500"></div>
+            </>
+          )}
+        </div>
+        <div className="grow pt-6 px-4">
+          <div className="flex">
+            <div className="grow">
+              <h2 className="text-2xl font-bold text-slate-700 leading-tight mb-2 text-balance bg-white/50">
+                {title}
+              </h2>
+
+              {agency && (
+                <h3 className="text-md text-slate-400 mb-2">{agency}</h3>
+              )}
             </div>
           </div>
+          <div className="text-slate-300 text-sm">{language}</div>
         </div>
 
         <div className="p-6">
           <a
             href={url}
             className="inline-flex items-center
-          mt-2 text-sm font-medium text-center focus:ring-4 focus:outline-none focus:ring-blue-300"
+          mt-2 text-xs font-medium text-center focus:ring-4 focus:outline-none focus:ring-blue-300"
           >
             Visit Site
             <svg
-              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-              aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
+              width="16"
+              height="16"
+              viewBox="0 0 48 48"
             >
               <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
+                d="M20 12l-2.83 2.83 9.17 9.17-9.17 9.17 2.83 2.83 12-12z"
+                fill="currentColor"
               />
+              <path d="M0 0h48v48h-48z" fill="none" />
             </svg>
           </a>
         </div>

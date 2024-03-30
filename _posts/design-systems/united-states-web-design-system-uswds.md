@@ -2,6 +2,7 @@
 countryCode: us
 agency: General Services Administration
 title: United States Web Design System
+thumbnail: /images/uploads/uswds-16x9.png
 url: https://designsystem.digital.gov
 language: English
 languageCode: en
