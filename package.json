@@ -5,18 +5,22 @@
   "version": "0.1.0",
   "author": "",
   "dependencies": {
+    "@uswds/uswds": "3.8.0",
     "gatsby": "^5.13.2",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-flagkit": "^2.0.4"
+    "react-flagkit": "^2.0.4",
+    "sass": "^1.72.0"
   },
   "devDependencies": {
+    "@uswds/compile": "^1.1.0",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-react-app": "^7.0.1",

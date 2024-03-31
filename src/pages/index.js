@@ -18,8 +18,7 @@ const IndexPage = ({
       <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
 
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      {/* <div className="grid grid-cols-[repeat(auto-fill,minmax(256px,1fr))] gap-4"> */}
-      <div className="grid grid-cols-3 gap-8">{cards}</div>
+      <ul className="usa-card-group">{cards}</ul>
     </Layout>
   );
 };

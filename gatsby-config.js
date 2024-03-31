@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: `https://gov-design-systems.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-sass`,
     "gatsby-plugin-postcss",
     `gatsby-plugin-image`,
     {
