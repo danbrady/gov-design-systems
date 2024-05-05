@@ -2,6 +2,7 @@
 countryCode: es
 agency: Servicios Digitales de Aragón
 title: Design System of the Government of Aragon
+thumbnail: /images/logos/govierno-de-aragon.svg
 url: https://desy.aragon.es/
 language: Español
 languageCode: es

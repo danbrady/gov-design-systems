@@ -19,7 +19,7 @@ const IndexPage = ({
 
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       {/* <div className="grid grid-cols-[repeat(auto-fill,minmax(256px,1fr))] gap-4"> */}
-      <div className="grid md:grid-cols-3 gap-8 p-4">{cards}</div>
+      <div className="grid md:grid-cols-5 gap-8 p-4">{cards}</div>
     </Layout>
   );
 };
